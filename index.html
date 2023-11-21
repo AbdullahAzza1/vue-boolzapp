@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3.3.8/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="interfaccia">
+        <div id="interSinistra">
+            <div id="infoContatto">
+                <div class="profilo">
+                    <img class="img" src="img/avatar_io.png" alt="">
+                    <div>Sofia</div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-code"></i>
+                </div>
+            </div>
+            <div id="contatti">
+                <div id="alert">notifiche</div>
+                <div id="cerca">barra</div>
+                <div>
+                    <div v-for>sdg</div>
+                </div>
+            </div>
+        </div>
+        <div id="interDestra">
+            <div id="contatto">
+                <div class="profilo">
+                    <img class="img" src="img/avatar_1.png" alt="">
+                    <div> {{name}} </div>
+                </div>
+            </div>
+            <div id="chat">
+                
+            </div>
+            <div id="barraScrittura">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

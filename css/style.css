@@ -1,0 +1,67 @@
+* {
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(24, 56, 24);
+}
+.interfaccia {
+    display: flex;
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+#interSinistra{
+    width: calc(100% - 65%);
+    height: 100%;
+}
+#infoContatto {
+    height: calc(100% - 90%);
+    background-color: rgb(208, 208, 208);
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+#contatti {
+    height: calc(100% - 10%);
+    background-color: white;
+}
+#interDestra{
+    width: calc(100% - 35%);
+    height: 100%;
+}
+#contatto{
+    height: calc(100% - 90%);
+    background-color: rgb(208, 208, 208);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#chat{
+    height: calc(100% - 20%);
+    background-color: aliceblue;
+}
+#barraScrittura{
+    height: calc(100% - 90%);
+    background-color: rgb(208, 208, 208);
+}
+.profilo{
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+}
+.img{
+    width: 30px;
+    border-radius: 50%;
+}
+#alert{
+    background-color: aqua;
+    height: 12%;
+}
+#cerca{
+    background-color: rgb(218, 218, 218);
+    height: 8%;
+}
+
