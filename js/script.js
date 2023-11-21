@@ -1,4 +1,4 @@
-contacts: [
+const contacts = [
     {
         name: 'Michele',
         avatar: './img/avatar_1.png',
@@ -161,7 +161,19 @@ contacts: [
         ],
     }
 ]
+contacts.forEach((contacts, i) => {
+    console.log(contacts, i);
+    let container = document.getElementById("casella");
 
+    let contactsTemplate = `<img class="img" src="img/avatar_1.png" alt="">
+<div>
+    <div>Michele</div>
+    <div class="text">ultimo messaggio inviato</div>
+</div>`;
+
+    container.innerHTML += contactsTemplate;
+
+});
 
 
 

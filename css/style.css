@@ -60,7 +60,7 @@ body{
     margin-left: 3%;
 }
 .img{
-    width: 30px;
+    width: 39px;
     border-radius: 50%;
 }
 #alert{
@@ -72,5 +72,14 @@ body{
     height: 8%;
     display: flex;
 }
-
+.casella{
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    border-style: groove;
+}
+.text{
+    color: grey;
+    font-size: small;
+}
 
