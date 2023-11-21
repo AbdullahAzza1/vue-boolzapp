@@ -171,7 +171,7 @@ contacts.forEach((post, i) => {
     <div class="text">ultimo messaggio inviato</div>
 </div>`;
 
-    container.innerHTML += contactsTemplate;
+    casella.innerHTML += contactsTemplate;
 
 });
 

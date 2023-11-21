@@ -72,11 +72,12 @@ body{
     height: 8%;
     display: flex;
 }
-.casella{
+#casella{
     display: flex;
     align-items: center;
     padding: 7px;
     border-style: groove;
+    overflow: auto;
 }
 .text{
     color: grey;
