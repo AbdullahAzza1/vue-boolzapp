@@ -161,13 +161,13 @@ const contacts = [
         ],
     }
 ]
-contacts.forEach((contacts, i) => {
-    console.log(contacts, i);
+contacts.forEach((post, i) => {
+    console.log(post, i);
     let container = document.getElementById("casella");
 
-    let contactsTemplate = `<img class="img" src="img/avatar_1.png" alt="">
+    let contactsTemplate = `<img class="img" src="${post.avatar}" alt="">
 <div>
-    <div>Michele</div>
+    <div>${post.name}</div>
     <div class="text">ultimo messaggio inviato</div>
 </div>`;
 
