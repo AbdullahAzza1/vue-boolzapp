@@ -1,6 +1,6 @@
 const { createApp } = Vue
 
-createApp({
+const opzioni = ({
     data() {
         return {
             conversazioneAttiva: 1,
@@ -169,21 +169,24 @@ createApp({
             ]
         }
     },
+    methods: {
+        selezionaChat(contacts) {
+            console.log(contacts);
+        }
+    },
     mounted() {
-        this.contacts.array.forEach(conversazione => {
-            console.log("foreach" + conversazione.name);
+        this.contacts.forEach(conversazione => {
+            console.log("foreach" + conversazione.contacts);
         });
         this.contacts[0].messages.forEach(messaggio => {
             console.log(messaggio.message);
         });
 
-        this.contacts[0].messages.forEach(messaggio =>{
-            console.log(messaggio.message);
-        })
+        
     }
 })
 
-.mount('#app')
+createApp(opzioni).mount('#app')
 
 
 
