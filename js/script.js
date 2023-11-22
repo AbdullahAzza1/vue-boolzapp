@@ -168,7 +168,7 @@ createApp({
                 }
             ]
         },
-        mounted() {
+            mounted() {
             this.contacts.array.forEach(conversazione => {
                 console.log("foreach" + conversazione.name);
             });
