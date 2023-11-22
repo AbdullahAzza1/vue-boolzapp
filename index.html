@@ -31,8 +31,11 @@
                     <button type="submit"><i class="fa fa-search"></i></button>
                     <input type="text" placeholder="cerca o inizia una nuova chat" name="search">
                 </div>
-                <div id="casella">
-
+                <div id="app">
+                    <div v-for="conversazione in contacts" id="casella">
+                        <img class="img" :src="conversazione.avatar" >
+                        <div> {{conversazione.name}} </div>
+                    </div>
                 </div>
             </div>
         </div>

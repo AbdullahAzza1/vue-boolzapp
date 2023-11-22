@@ -76,7 +76,7 @@ body{
     display: flex;
     align-items: center;
     padding: 7px;
-    border-style: groove;
+   
     overflow: auto;
 }
 .text{
