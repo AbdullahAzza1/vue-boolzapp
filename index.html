@@ -12,52 +12,54 @@
 </head>
 
 <body>
-    <div class="interfaccia">
-        <div id="interSinistra">
-            <div id="infoContatto">
-                <div class="profilo">
-                    <img class="img" src="img/avatar_io.png" alt="">
-                    <div>Sofia</div>
+    <div id="app">
+        <div class="interfaccia">
+            <div id="interSinistra">
+                <div id="infoContatto">
+                    <div class="profilo">
+                        <img class="img" src="img/avatar_io.png" alt="">
+                        <div>Sofia</div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-code"></i>
+                    </div>
                 </div>
-                <div>
-                    <i class="fa-solid fa-circle-notch"></i>
-                    <i class="fa-solid fa-message"></i>
-                    <i class="fa-solid fa-code"></i>
-                </div>
-            </div>
-            <div id="contatti">
-                <div id="alert">notifiche</div>
-                <div id="cerca">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                    <input type="text" placeholder="cerca o inizia una nuova chat" name="search">
-                </div>
-                <div id="app">
+                <div id="contatti">
+                    <div id="alert">notifiche</div>
+                    <div id="cerca">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <input type="text" placeholder="cerca o inizia una nuova chat" name="search">
+                    </div>
                     <div v-for="conversazione in contacts" id="casella">
-                        <img class="img" :src="conversazione.avatar" >
+                        <img class="img" :src="conversazione.avatar">
                         <div> {{conversazione.name}} </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="interDestra">
-            <div id="contatto">
-                <div class="profilo">
-                    <img class="img" src="img/avatar_1.png" alt="">
-                    <div> {{name}} </div>
+            <div id="interDestra">
+                <div id="contatto">
+                    <div class="profilo">
+                        <img class="img" src="img/avatar_1.png" alt="">
+                        <div> {{name}} </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-code"></i>
+                    </div>
                 </div>
-                <div>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-bars"></i>
-                    <i class="fa-solid fa-code"></i>
+                <div id="chat">
+                    <div v-for="messaggio in this.contacts[0].messages">
+                        <div> {{messaggio.date}}: {{messaggio.message}} </div>
+                    </div>
                 </div>
-            </div>
-            <div id="chat">
-
-            </div>
-            <div id="barraScrittura">
-                <i class="fa-regular fa-face-smile"></i>
-                <input class="write" type="text" placeholder="scrivi un messaggio">
-                <i class="fa-solid fa-microphone"></i>
+                <div id="barraScrittura">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input class="write" type="text" placeholder="scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
             </div>
         </div>
     </div>

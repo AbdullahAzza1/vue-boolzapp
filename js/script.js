@@ -167,17 +167,23 @@ createApp({
                     ]
                 }
             ]
-        },
-            mounted() {
-            this.contacts.array.forEach(conversazione => {
-                console.log("foreach" + conversazione.name);
-            });
-            this.contacts[0].messages.forEach(messaggio => {
-                console.log(messaggio.message);
-            });
         }
+    },
+    mounted() {
+        this.contacts.array.forEach(conversazione => {
+            console.log("foreach" + conversazione.name);
+        });
+        this.contacts[0].messages.forEach(messaggio => {
+            console.log(messaggio.message);
+        });
+
+        this.contacts[0].messages.forEach(messaggio =>{
+            console.log(messaggio.message);
+        })
     }
-}).mount('#app')
+})
+
+.mount('#app')
 
 
 
