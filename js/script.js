@@ -170,8 +170,8 @@ const opzioni = ({
         }
     },
     methods: {
-        selezionaChat(contacts) {
-            console.log(contacts);
+        selezionaChat(n) {
+            this.conversazioneAttiva = n
         }
     },
     mounted() {

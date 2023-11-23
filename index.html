@@ -32,7 +32,7 @@
                         <button type="submit"><i class="fa fa-search"></i></button>
                         <input type="text" placeholder="cerca o inizia una nuova chat" name="search">
                     </div>
-                    <div v-for="conversazione in contacts" id="casella" @click="selezionaChat(contacts)">
+                    <div v-for="conversazione in contacts" id="casella" @click="selezionaChat(i)">
                         <img class="img" :src="conversazione.avatar">
                         <div> {{conversazione.name}} </div>
                     </div>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div id="chat">
-                    <div v-for="messaggio in this.contacts[0].messages">
+                    <div v-for="messaggio in this.contacts[this.conversazioneAttiva].messages">
                         <div> {{messaggio.date}}: {{messaggio.message}} </div>
                     </div>
                 </div>
