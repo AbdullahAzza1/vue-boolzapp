@@ -30,9 +30,9 @@
                     <div id="alert">notifiche</div>
                     <div id="cerca">
                         <button type="submit"><i class="fa fa-search"></i></button>
-                        <input type="text" placeholder="cerca o inizia una nuova chat" name="search">
+                        <input type="text" v-model="searchText" placeholder="cerca o inizia una nuova chat" @keyup="searchContact">
                     </div>
-                    <div v-for="conversazione in contacts" id="casella" @click="selezionaChat(i)">
+                    <div v-for="conversazione,i in contacts" id="casella" v-show="conversazione.visible" @click="selezionaChat(i)">
                         <img class="img" :src="conversazione.avatar">
                         <div> {{conversazione.name}} </div>
                     </div>

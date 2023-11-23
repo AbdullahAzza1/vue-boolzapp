@@ -1,9 +1,10 @@
 const { createApp } = Vue
 
-const opzioni = ({
+const vue = createApp({
     data() {
         return {
-            conversazioneAttiva: 1,
+            conversazioneAttiva: 0,
+            searchText: "",
             contacts: [
                 {
                     name: 'Michele',
@@ -171,7 +172,17 @@ const opzioni = ({
     },
     methods: {
         selezionaChat(n) {
+            console.log(n);
             this.conversazioneAttiva = n
+        },
+        searchContact() {
+            console.log("cerca: ", this.searchText);
+            
+            if (conversazione.name == this.searchText) {
+                conversazione.visible = true
+            } else {
+                conversazione.visible = false
+            }
         }
     },
     mounted() {
@@ -182,11 +193,11 @@ const opzioni = ({
             console.log(messaggio.message);
         });
 
-        
+
     }
 })
 
-createApp(opzioni).mount('#app')
+    .mount('#app')
 
 
 
