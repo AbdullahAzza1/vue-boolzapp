@@ -167,7 +167,11 @@ const vue = createApp({
                         }
                     ]
                 }
-            ]
+            ],
+            lista: [
+                "Test messaggio",
+                "Test messaggio",
+              ],
         }
     },
     methods: {
@@ -183,7 +187,14 @@ const vue = createApp({
             } else {
                 conversazione.visible = false
             }
-        }
+        },
+        add(){
+            this.lista.push(this.testo);
+            this.testo = "";
+          },
+          changeChat (index){
+            this.contatoreChat = index;
+          }
     },
     mounted() {
         this.contacts.forEach(conversazione => {

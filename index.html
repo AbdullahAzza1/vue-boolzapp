@@ -53,6 +53,7 @@
                 <div id="chat">
                     <div v-for="messaggio in this.contacts[this.conversazioneAttiva].messages">
                         <div> {{messaggio.date}}: {{messaggio.message}} </div>
+                        <div v-for="(listaElemento, index) in lista" class="userMessage">{{listaElemento}}</div>
                     </div>
                 </div>
                 <div id="barraScrittura">
